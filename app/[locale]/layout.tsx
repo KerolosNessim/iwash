@@ -47,7 +47,7 @@ export default async function RootLayout({
       className={`${font.className} `}
       suppressHydrationWarning
     >
-      <body dir={locale === "ar" ? "rtl" : "ltr"}>
+      <body dir={locale === "ar" ? "rtl" : "ltr"}  >
         <NextIntlClientProvider messages={messages}>
           <DirectionProvider dir={locale === "ar" ? "rtl" : "ltr"}>
             <Navbar/>

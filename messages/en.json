@@ -1,3 +1,92 @@
 {
-  "hello":"hello"
+  "Navbar": {
+    "daily_from": "Daily from: 07:00 - 23:00",
+    "home": "Home",
+    "packages": "Packages",
+    "services": "Services",
+    "reviews": "Reviews",
+    "blog": "Blog",
+    "login": "Login",
+    "sheet_description": "Main navigation menu for mobile"
+  },
+  "Hero": {
+    "label": "✨ Service designed for your car... at your place.",
+    "title_part1": "Your Car",
+    "title_part2": "Clean ..",
+    "title_highlight": "Without leaving",
+    "title_part3": "Your place !",
+    "description": "Professional service that reaches you in minutes without the need to move and wait in long queues.",
+    "start_now": "Start Now",
+    "view_packages": "View Packages",
+    "follow_us": "Follow us on ---",
+    "our_numbers": "Our Numbers:",
+    "customers": "Customers",
+    "orders": "Orders",
+    "instant_booking": "Instant Booking",
+    "fast_speed": "Fast Speed",
+    "competitive_prices": "Competitive Prices"
+  },
+  "IntroSection": {
+    "title_part1": "Service",
+    "title_highlight": "Car Wash",
+    "title_part2": "Professional in Qatar",
+    "description": "We offer a first-class car washing service. We combine comfort and quality to give your car a perfect shine without leaving your place.",
+    "flexibility": "Appointment Flexibility",
+    "professional_team": "Professional Team",
+    "complete_equipment": "Full Equipment",
+    "start_now": "Start Now"
+  },
+  "PackageSection": {
+    "badgeText": "Our Packages!",
+    "title": "Ensure your car wash",
+    "highlight": "All month..",
+    "description": "Whether you want a quick wash or continuous care, we have the perfect package for you.",
+    "quality_guarantee": "All packages include quality guarantee."
+  },
+  "Packages": {
+    "active_sub": "Activate subscription to continue",
+    "internal_wash_only": "Internal Cleaning",
+    "both_wash": "Internal & External Cleaning",
+    "request_now": "Request Subscription Now",
+    "standard": {
+      "title": "Standard Package",
+      "price": "70 QR",
+      "time": "15 -30 min",
+      "features": {
+        "external": [
+          "Regular External Wash",
+          "Glass Cleaning",
+          "Regular Tire Polishing"
+        ],
+        "internal": [
+          "Hand Wash Carpets",
+          "Full Cabin Cleaning",
+          "Dust Wipe from Ceiling",
+          "AC Vent Cleaning",
+          "Perfuming"
+        ]
+      }
+    },
+    "vip": {
+      "title": "Golden Package",
+      "price": "130 QR",
+      "time": "15 -30 min",
+      "features": {
+        "external": [
+          "Custom Shampoo Wash",
+          "Glass Cleaning with Special Materials",
+          "Tire Polishing",
+          "Rim Washing & Polishing",
+          "Headlight Polishing with Special Devices"
+        ],
+        "internal": [
+          "Hand Wash Carpets",
+          "Full Cabin Cleaning",
+          "Dust Wipe from Ceiling",
+          "AC Vent Cleaning",
+          "Perfuming"
+        ]
+      }
+    }
+  }
 }

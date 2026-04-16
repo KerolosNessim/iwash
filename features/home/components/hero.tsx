@@ -5,120 +5,165 @@ import { HiOutlineSquare3Stack3D } from "react-icons/hi2";
 import { TbArrowBigLeftLinesFilled } from "react-icons/tb";
 import { RiFlashlightLine } from "react-icons/ri";
 import { FaHandHoldingUsd } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("Hero");
+
   return (
-    <div className="bg-[url('/hero-1.png')]  bg-cover bg-center bg-no-repeat ">
-      <div className="bg-linear-to-l from-black/90 via-black/70 to-black/50  min-h-[110vh] flex flex-col items-center justify-end ">
-        <div className="container ">
-          {/* main flex */}
-          <div className="flex lg:items-center lg:justify-between max-lg:gap-6 max-lg:flex-col h-full">
-            {/* content */}
-            <div className="space-y-6">
+    <div className="bg-[url('/hero-1.png')] bg-cover bg-center bg-no-repeat w-full min-h-screen ">
+      <div className="pb-20 bg-linear-to-l from-black/90 via-black/70 to-black/50 min-h-screen w-full flex flex-col justify-between pt-32 relative space-y-10">
+        {/* Main Content Area */}
+        <div className="container flex-1 flex flex-col justify-center">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+            {/* Right Side (RTL) - Text Content */}
+            <div className="space-y-4 max-w-2xl w-full">
               {/* label */}
               <div className="flex items-center gap-2">
-                <div className="w-8 h-1 bg-brand "></div>
-                <p className="text-white lg:text-lg ">
-                  ✨ خدمة مصممة لسيارتك... في مكانك.
+                <div className="w-8 h-1 bg-brand"></div>
+                <p className="text-white lg:text-lg">
+                  {t("label")}
                 </p>
               </div>
+
               {/* title */}
-              <h1 className="text-white lg:text-6xl text-5xl font-bold leading-snug">
-                سيــــــارتك نظيفة ..
+              <h1 className="text-white text-5xl lg:text-6xl font-bold leading-tight uppercase">
+                <span className="tracking-widest">{t("title_part1")}</span> {t("title_part2")}
                 <br />
-                <span className="text-brand">دون مغادرة </span>
-                مكانك !
+                <span className="text-brand">{t("title_highlight")}</span> {t("title_part3")}
               </h1>
+
               {/* description */}
-              <p className="text-gray-400 lg:text-lg">
-                خدمة احترافية تصل إليك في دقائق دون الحاجة للتحرك وانتظار
-                الطوابير الطويلة.
+              <p className="text-gray-400 text-lg">
+                {t("description")}
               </p>
+
               {/* buttons */}
-              <div className="flex items-center gap-4 ">
-                <Button className="bg-brand text-black px-12 lg:h-12 h-10 lg:text-lg  rounded-full font-bold">
-                  ابدأ التجربة الآن <TbArrowBigLeftLinesFilled />
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Button className="bg-brand text-black px-8 h-12 lg:h-14 lg:text-lg rounded-full font-bold hover:bg-brand/90 hover:scale-105 transition-all">
+                  {t("start_now")}
+                  <TbArrowBigLeftLinesFilled className="ltr:-rotate-180" />
                 </Button>
-                <Button className="bg-white text-gray-500 px-12 lg:h-12 h-10 lg:text-lg  rounded-full font-bold">
-                  اطّلع على البـــاقات
-                  <HiOutlineSquare3Stack3D />
+
+                <Button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 h-12 lg:h-14 lg:text-lg rounded-full font-bold hover:bg-white hover:text-black transition-all">
+                  {t("view_packages")}
+                  <HiOutlineSquare3Stack3D  />
                 </Button>
               </div>
             </div>
 
-            {/* social and counter */}
-            <div className="lg:space-y-12 space-y-6 max-lg:w-fit max-lg:mx-auto ">
-              {/* social */}
-              <div className="flex lg:flex-col flex-row items-center lg:justify-center lg:gap-12 gap-4  w-fit lg:ms-auto">
-                <p className="lg:-rotate-90 text-lg font-bold text-white flex items-center gap-2">
-                  تابعنا على ــــــــــــــ
-                </p>
-                <div className="space-y-2 max-lg:flex max-lg:items-center max-lg:justify-center max-lg:gap-4">
-                  <a
-                    href="#"
-                    className="w-15 h-15 rounded-full bg-white flex items-center justify-center"
-                  >
-                    <Image
-                      src="/instagram.svg"
-                      alt="instagram"
-                      width={24}
-                      height={24}
-                      className="w-9 h-9"
-                    />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-15 h-15 rounded-full bg-white flex items-center justify-center"
-                  >
-                    <Image
-                      src="/facebook.svg"
-                      alt="facebook"
-                      width={24}
-                      height={24}
-                      className="w-9 h-9"
-                    />
-                  </a>
+            {/* Left Side (RTL) - Floating Elements Placeholder for Desktop Balance (Optional, keeping it flex friendly) */}
+            <div className="hidden lg:block lg:w-1/3"></div>
+          </div>
+        </div>
+
+        {/* Floating Social Sidebar  */}
+        <div className="hidden lg:flex flex-col items-end gap-2 absolute inset-e-[7.5%] top-1/2 -translate-y-1/2">
+          
+          {/* Text block fixed: using a relative spacer so rotation doesn't break flex alignment */}
+          <div className="relative w-14 h-32 flex items-center justify-center">
+            <div className="-rotate-90 ltr:rotate-90 absolute whitespace-nowrap ">
+              <p className="text-lg font-bold text-white">
+                {t("follow_us")}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <a
+              href="#"
+              className="w-14 h-14 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+            >
+              <Image
+                src="/instagram.svg"
+                alt="instagram"
+                width={28}
+                height={28}
+                className="w-8 h-8"
+              />
+            </a>
+            <a
+              href="#"
+              className="w-14 h-14 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+            >
+              <Image
+                src="/facebook.svg"
+                alt="facebook"
+                width={28}
+                height={28}
+                className="w-8 h-8"
+              />
+            </a>
+          </div>
+          {/* conters */}
+          <div className="w-full lg:w-auto flex flex-col lg:items-start gap-4 ">
+            <p className="text-gray-300 font-medium">{t("our_numbers")}</p>
+            <div className="flex items-center gap-8">
+              <div className="flex flex-col justify-end h-full">
+                <div className="text-white font-bold flex items-end ltr:flex-row-reverse">
+                  <p className="text-lg pb-1 text-brand">k</p>
+                  <p className="text-5xl leading-none">10</p>
+                  <p className="text-xl pb-1 text-brand">+</p>
                 </div>
+                <p className="text-gray-300 text-sm mt-1">{t("customers")}</p>
               </div>
-              {/* counter */}
-              <div>
-                <p className="text-gray-300">أرقــامنــــــا : </p>
-                <div className="flex items-center gap-6 ">
-                  <div className="flex flex-col gap-2">
-                    <div className="text-white  font-bold flex items-end ">
-                      <p className="text-lg">k</p>
-                      <p className="text-5xl">10</p>
-                      <p className="text-lg self-center">+</p>
-                    </div>
-                    <p className="text-gray-300 ">عدد عملاؤنا</p>
-                  </div>
-                  <div className="w-px h-8 bg-gray-400"></div>
-                  <div className="flex flex-col gap-2">
-                    <div className="text-white  font-bold flex items-end ">
-                      <p className="text-lg">k</p>
-                      <p className="text-5xl">47</p>
-                      <p className="text-lg self-center">+</p>
-                    </div>
-                    <p className="text-gray-300 ">عدد الطلبات</p>
-                  </div>
+
+              <div className="w-px h-12 bg-white/20"></div>
+
+              <div className="flex flex-col justify-end h-full">
+                <div className="text-white font-bold flex items-end ltr:flex-row-reverse">
+                  <p className="text-lg pb-1 text-brand">k</p>
+                  <p className="text-5xl leading-none">47</p>
+                  <p className="text-xl pb-1 text-brand">+</p>
                 </div>
+                <p className="text-gray-300 text-sm mt-1">{t("orders")}</p>
               </div>
             </div>
           </div>
         </div>
-        {/* features */}
-        <div className="container flex items-center justify-between  self-end mt-20 mb-10">
-          <div className="flex items-center gap-2 text-white">
-            <LucideClipboardCheck className="size-12 " />
-            <p className=" text-lg font-bold">حجز فوري</p>
+
+        {/* responsive icons */}
+        <div className="lg:hidden flex flex-row items-center justify-center gap-6 mt-8">
+          <p className="text-lg font-bold text-white">{t("follow_us")}</p>
+          <div className="flex items-center gap-4">
+            <a
+              href="#"
+              className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Image
+                src="/instagram.svg"
+                alt="instagram"
+                width={24}
+                height={24}
+              />
+            </a>
+            <a
+              href="#"
+              className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Image
+                src="/facebook.svg"
+                alt="facebook"
+                width={24}
+                height={24}
+              />
+            </a>
           </div>
-          <div className="flex items-center gap-2 text-white">
-            <RiFlashlightLine className="size-12" />
-            <p className=" text-lg font-bold">حجز فوري</p>
+        </div>
+
+        {/* Features (Right/Center Area in RTL) */}
+        <div className="max-lg:hidden container flex flex-wrap lg:flex-nowrap items-center justify-between  ">
+          <div className="flex items-center gap-3 text-white">
+            <LucideClipboardCheck className="size-10 lg:size-12 text-brand" />
+            <p className="text-base lg:text-lg font-bold">{t("instant_booking")}</p>
           </div>
-          <div className="flex items-center gap-2 text-white">
-            <FaHandHoldingUsd className="size-12" />
-            <p className=" text-lg font-bold">سرعة فائقة</p>
+          <div className="flex items-center gap-3 text-white">
+            <RiFlashlightLine className="size-10 lg:size-12 text-brand" />
+            <p className="text-base lg:text-lg font-bold">{t("fast_speed")}</p>
+          </div>
+          <div className="flex items-center gap-3 text-white">
+            <FaHandHoldingUsd className="size-10 lg:size-12 text-brand" />
+            <p className="text-base lg:text-lg font-bold">{t("competitive_prices")}</p>
           </div>
         </div>
       </div>

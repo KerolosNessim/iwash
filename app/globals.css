@@ -166,7 +166,7 @@
     width: 96%;
   }
   @variant xl {
-    width: 90%;
+    width: 85%;
   }
   @variant 2xl {
     width: 85%;
@@ -180,4 +180,18 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
 }
