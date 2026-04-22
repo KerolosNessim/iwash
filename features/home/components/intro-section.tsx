@@ -3,6 +3,7 @@ import { Calendar, Droplets, Users, Play } from "lucide-react";
 import Image from "next/image";
 import { TbArrowBigLeftLinesFilled } from "react-icons/tb";
 import { useTranslations } from "next-intl";
+import StartNowBtn from "@/features/shared/components/start-now-btn";
 
 export default function IntroSection() {
   const t = useTranslations("IntroSection");
@@ -25,7 +26,8 @@ export default function IntroSection() {
             {/* Title with brand highlight */}
             <div className="space-y-4">
               <h2 className="text-4xl lg:text-6xl font-black text-[#1a1a1a] leading-[1.2]">
-                {t("title_part1")} <span className="text-brand">{t("title_highlight")}</span>
+                {t("title_part1")}{" "}
+                <span className="text-brand">{t("title_highlight")}</span>
                 <br />
                 {t("title_part2")}
               </h2>
@@ -68,10 +70,7 @@ export default function IntroSection() {
 
             {/* CTA Button */}
             <div className="pt-4 flex justify-center lg:justify-start">
-              <Button className="bg-brand text-black px-8 h-12 lg:h-14 lg:text-lg rounded-full font-bold hover:bg-brand/90 hover:scale-105 transition-all">
-                {t("start_now")}
-                <TbArrowBigLeftLinesFilled className="ltr:-rotate-180" />
-              </Button>
+              <StartNowBtn />
             </div>
           </div>
 

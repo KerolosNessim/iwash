@@ -21,8 +21,8 @@ type HeroSectionProps = {
 
 export default function SectionHeader({
   title = "اضمن غسيل سيارتك",
-  highlight = "طوال الشهر..",
-  description = "سواء كنت تريد غسلة سريعة أو عناية مستمرة، لدينا الباقة المثالية لك.",
+  highlight = "",
+  description = "",
   icon,
   badgeText = "باقاتنا!",
 

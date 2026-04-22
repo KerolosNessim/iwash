@@ -189,9 +189,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/20 rounded-full;
+  @apply bg-brand rounded-full;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  @apply bg-white;
 }

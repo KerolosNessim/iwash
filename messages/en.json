@@ -87,6 +87,103 @@
           "Perfuming"
         ]
       }
+    },
+        "subscription": "Subscribe",
+    "per_month":"Washes per month",
+    "save":"Save",
+    "choose":"Choose the wash method you deserve!",
+    "external":"External only",
+    "both":"External & Internal",
+    "what_you_get":"What you will get:"
+  },
+  "WhyUs": {
+    "badgeText": "What Makes Us Special!",
+    "title": "Why Choose",
+    "highlight": "iWash?",
+    "description": "We are committed to the highest quality standards to ensure your complete satisfaction.",
+    "reason1": {
+      "title": "Flexible Booking",
+      "description": "Smart booking system ensures you enter on time."
+    },
+    "reason2": {
+      "title": "100% Safe Products",
+      "description": "Global cleaning materials safe for your car."
+    },
+    "reason3": {
+      "title": "Professional Team",
+      "description": "Skilled workforce trained in the latest washing techniques."
+    },
+    "reason4": {
+      "title": "Satisfaction Guarantee",
+      "description": "Customer satisfaction is our top priority in all stages of service."
+    }
+  },
+  "works": {
+    "badgeText": "From Reality!",
+    "title": "From our works!"
+  },
+  "testimonials": {
+    "badgeText": "Our Customers Reviews",
+    "title": "What Our Customers ",
+    "highlight": "Say About Us!",
+      "content": {
+    "before": "Before",
+    "after": "After",
+    "location": "centro mall",
+    "userName": "Abdullah Al Amoudi",
+    "review": "Excellent and fast service in a flash. I left the car, went out, and came back quickly. May God grant you wellness.",
+    "rating": "5.0"
+  }
+},
+    "footer": {
+      "payment_method": "Secure Payment Methods",
+      "quickLinks": "Quick Links",
+      "account": "Account",
+      "contact": "Need Help?",
+      "workingHours": "Working Hours",
+      "email": "Email",
+      "phone": "Phone",
+      "followUs": "Follow Us",
+      "rights": "All rights reserved",
+      "terms": "Terms and Conditions",
+      "contact_us": "Contact Us",
+      "privacy": "Privacy Policy",
+      "links": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "contact": "Contact Us"
+      },
+      "accountLinks": {
+        "login": "Login",
+        "register": "Register",
+        "orders": "My Orders"
+      },
+      "days": {
+        "satThu": "Saturday - Thursday",
+        "fri": "Friday"
+      },
+      "time": {
+        "weekdays": "9:00 AM - 6:00 PM",
+        "friday": "2:00 PM - 9:00 PM"
+      },
+      "description": "Get premium car wash services at your location. We guarantee quality and convenience."
+    },
+        "HowWork":{
+      "badgeText": "How we work!",
+      "title": "Washing your car is easier than ever!",
+      "description": "Three simple steps to a professional car wash service.",
+      "step1": {
+        "title": "Choose the service",
+        "description": "Select the type of wash suitable for your car from the list."
+      },
+      "step2": {
+        "title": "Set the time",
+        "description": "Choose the time that suits your schedule."
+      },
+      "step3": {
+        "title": "Confirm the booking",
+        "description": "Receive your clean car."
+      }
     }
   }
-}

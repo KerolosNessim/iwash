@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-50 pt-5 transition-all duration-300 ${scrolled ? "bg-black/50 backdrop-blur-md" : ""}`}
+      className={`fixed top-0 left-0 right-0 z-50 pt-2 transition-all duration-300 ${scrolled ? "bg-black/50 backdrop-blur-md" : ""}`}
     >
       {/* Top Bar */}
       <div className="container  flex items-center justify-between pb-2">
@@ -70,7 +70,7 @@ export default function Navbar() {
 
       {/* Bottom Bar */}
       <div className=" border-t border-b border-white/10 ">
-        <div className="container  flex items-center justify-between py-2">
+        <div className="container  flex items-center justify-between py-3">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">

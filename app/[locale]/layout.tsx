@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/features/shared/components/navbar";
+import Footer from "@/features/shared/components/footer";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-geist-sans",
@@ -52,6 +53,7 @@ export default async function RootLayout({
           <DirectionProvider dir={locale === "ar" ? "rtl" : "ltr"}>
             <Navbar/>
             {children}
+            <Footer/>
             <Toaster richColors position="top-right" />
           </DirectionProvider>
         </NextIntlClientProvider>

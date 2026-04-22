@@ -6,6 +6,7 @@ import { TbArrowBigLeftLinesFilled } from "react-icons/tb";
 import { RiFlashlightLine } from "react-icons/ri";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import StartNowBtn from "@/features/shared/components/start-now-btn";
 
 export default function HeroSection() {
   const t = useTranslations("Hero");
@@ -21,33 +22,28 @@ export default function HeroSection() {
               {/* label */}
               <div className="flex items-center gap-2">
                 <div className="w-8 h-1 bg-brand"></div>
-                <p className="text-white lg:text-lg">
-                  {t("label")}
-                </p>
+                <p className="text-white lg:text-lg">{t("label")}</p>
               </div>
 
               {/* title */}
               <h1 className="text-white text-5xl lg:text-6xl font-bold leading-tight uppercase">
-                <span className="tracking-widest">{t("title_part1")}</span> {t("title_part2")}
+                <span className="tracking-widest">{t("title_part1")}</span>{" "}
+                {t("title_part2")}
                 <br />
-                <span className="text-brand">{t("title_highlight")}</span> {t("title_part3")}
+                <span className="text-brand">{t("title_highlight")}</span>{" "}
+                {t("title_part3")}
               </h1>
 
               {/* description */}
-              <p className="text-gray-400 text-lg">
-                {t("description")}
-              </p>
+              <p className="text-gray-400 text-lg">{t("description")}</p>
 
               {/* buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Button className="bg-brand text-black px-8 h-12 lg:h-14 lg:text-lg rounded-full font-bold hover:bg-brand/90 hover:scale-105 transition-all">
-                  {t("start_now")}
-                  <TbArrowBigLeftLinesFilled className="ltr:-rotate-180" />
-                </Button>
+                <StartNowBtn />
 
                 <Button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 h-12 lg:h-14 lg:text-lg rounded-full font-bold hover:bg-white hover:text-black transition-all">
                   {t("view_packages")}
-                  <HiOutlineSquare3Stack3D  />
+                  <HiOutlineSquare3Stack3D />
                 </Button>
               </div>
             </div>
@@ -59,13 +55,10 @@ export default function HeroSection() {
 
         {/* Floating Social Sidebar  */}
         <div className="hidden lg:flex flex-col items-end gap-2 absolute inset-e-[7.5%] top-1/2 -translate-y-1/2">
-          
           {/* Text block fixed: using a relative spacer so rotation doesn't break flex alignment */}
           <div className="relative w-14 h-32 flex items-center justify-center">
             <div className="-rotate-90 ltr:rotate-90 absolute whitespace-nowrap ">
-              <p className="text-lg font-bold text-white">
-                {t("follow_us")}
-              </p>
+              <p className="text-lg font-bold text-white">{t("follow_us")}</p>
             </div>
           </div>
 
@@ -155,7 +148,9 @@ export default function HeroSection() {
         <div className="max-lg:hidden container flex flex-wrap lg:flex-nowrap items-center justify-between  ">
           <div className="flex items-center gap-3 text-white">
             <LucideClipboardCheck className="size-10 lg:size-12 text-brand" />
-            <p className="text-base lg:text-lg font-bold">{t("instant_booking")}</p>
+            <p className="text-base lg:text-lg font-bold">
+              {t("instant_booking")}
+            </p>
           </div>
           <div className="flex items-center gap-3 text-white">
             <RiFlashlightLine className="size-10 lg:size-12 text-brand" />
@@ -163,7 +158,9 @@ export default function HeroSection() {
           </div>
           <div className="flex items-center gap-3 text-white">
             <FaHandHoldingUsd className="size-10 lg:size-12 text-brand" />
-            <p className="text-base lg:text-lg font-bold">{t("competitive_prices")}</p>
+            <p className="text-base lg:text-lg font-bold">
+              {t("competitive_prices")}
+            </p>
           </div>
         </div>
       </div>
