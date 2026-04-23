@@ -1,5 +1,3 @@
-import { getLocale } from "next-intl/server";
-
 export class ApiError extends Error {
   status: number;
   data: unknown;
@@ -22,10 +20,39 @@ export async function apiFetch<T>(
   options: FetchOptions = {}
 ): Promise<T> {
   const { token, headers, ...rest } = options;
-  const locale = await getLocale();
+  
+  // Get locale safely for both server and client
+  let locale = "ar";
+  try {
+    if (typeof window === "undefined") {
+      const { getLocale } = await import("next-intl/server");
+      locale = await getLocale();
+    } else {
+      locale = document.documentElement.lang || "ar";
+    }
+  } catch (e) {
+    console.error("Error getting locale in apiFetch:", e);
+  }
 
   // Ensure the URL is absolute for server-side fetching
   const url = endpoint.startsWith("http") ? endpoint : `${DEFAULT_BASE_URL}${endpoint}`;
+
+  // Get token if not provided
+  let activeToken = token;
+  if (!activeToken) {
+    if (typeof window === "undefined") {
+      try {
+        const { cookies } = await import("next/headers");
+        const cookieStore = await cookies();
+        activeToken = cookieStore.get("token")?.value;
+      } catch (e) {}
+    } else {
+      try {
+        const { useAuthStore } = await import("@/features/auth/store/auth-store");
+        activeToken = useAuthStore.getState().token || undefined;
+      } catch (e) {}
+    }
+  }
 
   const res = await fetch(url, {
     ...rest,
@@ -33,7 +60,7 @@ export async function apiFetch<T>(
       "Accept-Language": locale,
       "Accept": "application/json",
       "Content-Type": "application/json",
-      ...(token && { Authorization: `Bearer ${token}` }),
+      ...(activeToken && { Authorization: `Bearer ${activeToken}` }),
       ...headers,
     },
   });

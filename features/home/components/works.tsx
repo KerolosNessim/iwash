@@ -6,21 +6,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import SectionHeader from "@/features/shared/components/section-header";
-import { useTranslations } from "next-intl";
 import { MdStars } from "react-icons/md";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
-import { useLocale } from "next-intl";
-export default function Works() {
-  const t = useTranslations("works");
-  const locale = useLocale();
-  const images = [
-    "/work-1.png",
-    "/work-2.png",
-    "/work-3.png",
-    "/work-4.png",
-    "/work-5.png",
-  ];
+import { getTranslations } from "next-intl/server";
+import { getLocale } from "next-intl/server";
+import { getPortfolio } from "../services/get-portfolio";
+export default async function Works() {
+  const t = await getTranslations("works");
+  const locale = await getLocale();
+
+
+  const portfolioData = await getPortfolio();
+  const images = portfolioData?.data?.settings?.gallery;
   return (
     <div className="py-16">
       <Carousel
@@ -33,8 +31,8 @@ export default function Works() {
       >
         <div className="container flex items-center justify-between">
           <SectionHeader
-            title={t("title")}
-            badgeText={t("badgeText")}
+            title={portfolioData?.data?.settings?.title || t("title")}
+            badgeText={portfolioData?.data?.settings?.subtitle || t("badgeText")}
             icon={<MdStars className="size-4" />}
             badgeColor="bg-red-500"
           />
@@ -48,9 +46,9 @@ export default function Works() {
           </div>
         </div>
         <CarouselContent className="">
-          {images.map((image, index) => (
+          {images?.map((image, index) => (
             <CarouselItem key={index} className="basis-[75%] md:basis-1/2 lg:basis-1/4">
-              <Image src={image} alt="work" className="w-full rounded-[2rem] lg:h-[70vh] h-[50vh] object-cover" width={500} height={500}/>
+              <Image src={image} alt={`work-${index}`} className="w-full rounded-[2rem] lg:h-[70vh] h-[50vh] object-cover" width={500} height={500}/>
             </CarouselItem>
           ))}
         </CarouselContent>

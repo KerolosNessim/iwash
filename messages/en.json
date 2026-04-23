@@ -7,6 +7,10 @@
     "reviews": "Reviews",
     "blog": "Blog",
     "login": "Login",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "logout_success": "Logged out successfully",
     "sheet_description": "Main navigation menu for mobile"
   },
   "Hero": {
@@ -184,6 +188,45 @@
       "step3": {
         "title": "Confirm the booking",
         "description": "Receive your clean car."
+      }
+    },
+        "auth":{
+      "login_title": "Welcome back!",
+      "login_description": "Enter the data to register your account now.",
+      "login_form":{
+        "phone_label": "Phone Number",
+        "password_placeholder": "Enter password here ...",
+        "password_label": "Password",
+        "required_message": "This field is required",
+        "min_length_message": "Password must be at least 6 characters",
+        "phone_valid_message": "Enter a valid phone number",
+        "password_valid_message": "Enter a valid password",
+        "login_btn": "Login",
+        "remember_me": "Remember Me",
+        "forgot_password": "Forgot password?",
+        "or": "Or",
+        "have_not_account": "Don't have an account?",
+        "register": "Create new account"
+      },
+      "register_title": "Create New Account",
+      "register_description": "Enter the data to create your account now.",
+      "register_form": {
+        "name_label": "First and Last Name",
+        "name_placeholder": "Enter first and last name here ...",
+        "email_label": "Email Address",
+        "email_placeholder": "example@gmail.com",
+        "terms_text": "By clicking 'Create your account now', you agree to the Terms and Conditions and Privacy Policy",
+        "register_btn": "Create your account now",
+        "already_have_account": "Already have an account?",
+        "login_now": "Login now"
+      },
+      "register_success": {
+        "title": "Account created successfully!",
+        "welcome": "Welcome to iWash",
+        "description": "Choose your car wash package, set your location and service time with ease.",
+        "view_packages": "View Packages",
+        "download_app": "Download the app now",
+        "download_on_the": "Download On The"
       }
     }
   }

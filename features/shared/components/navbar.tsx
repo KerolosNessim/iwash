@@ -4,7 +4,7 @@ import { Clock, Phone } from "lucide-react";
 import Image from "next/image";
 import LocaleSwitcher from "./locale-switcher";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import { Link, usePathname } from "@/i18n/navigation";
 import { FiArrowUpLeft } from "react-icons/fi";
 import {
@@ -17,11 +17,25 @@ import { TiStarOutline } from "react-icons/ti";
 import { useEffect, useState } from "react";
 import NavbarSheet from "./navbar-sheet";
 import { useTranslations } from "next-intl";
+import LoginDialog from "@/features/auth/components/login-dialog";
+import { useAuthStore } from "@/features/auth/store/auth-store";
+import { Avatar, AvatarFallback, AvatarImage } from "../../../components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../../../components/ui/dropdown-menu";
+import { LogOut, Settings, User as UserIcon } from "lucide-react";
+import { toast } from "sonner";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations("Navbar");
+  const {user}=useAuthStore()
 
   const navLinks = [
     { href: "/", label: t("home"), icon: TbPentagonMinus },
@@ -116,10 +130,73 @@ export default function Navbar() {
             </Button>
 
             {/* Login Button */}
-            <Button className="h-10 lg:h-12 px-4 lg:px-6 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all flex items-center gap-2 font-bold text-sm lg:text-base">
-              {t("login")}
-              <FiArrowUpLeft className="size-4 lg:size-5" />
-            </Button>
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="h-10 lg:h-12 pl-1.5 pr-4 lg:pr-6 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-brand hover:text-black transition-all flex items-center gap-2.5 font-bold text-sm lg:text-base group">
+                    <Avatar className="size-7 lg:size-9 border border-white/20">
+                      <AvatarImage src={user.avatar || ""} alt={user.name} />
+                      <AvatarFallback className="bg-brand text-white text-xs">
+                        {user.name?.substring(0, 2).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                    <span className="max-w-[120px] truncate">{user.name}</span>
+                    <FiArrowUpLeft className="size-4 lg:size-5 transition-transform group-hover:rotate-45" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="end" 
+                  className="w-64 mt-3 rounded-[1.5rem] border-white/20 bg-black/40 backdrop-blur-2xl text-white p-2 shadow-2xl overflow-hidden"
+                >
+                  <DropdownMenuLabel className="p-4 pt-3">
+                    <div className="flex flex-col space-y-1.5">
+                      <p className="text-sm font-bold leading-none text-brand uppercase tracking-wider">{user.name}</p>
+                      <p className="text-xs leading-none text-white/40 truncate">{user.email}</p>
+                    </div>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator className="bg-white/10 mx-2" />
+                  <div className="p-1">
+                    <DropdownMenuItem className="flex items-center gap-3 p-3 focus:bg-white/10 focus:text-white cursor-pointer rounded-xl font-semibold transition-all">
+                      <div className="size-8 rounded-lg bg-white/5 flex items-center justify-center">
+                        <UserIcon className="h-4 w-4 text-brand" />
+                      </div>
+                      <span>{t("profile")}</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="flex items-center gap-3 p-3 focus:bg-white/10 focus:text-white cursor-pointer rounded-xl font-semibold transition-all">
+                      <div className="size-8 rounded-lg bg-white/5 flex items-center justify-center">
+                        <Settings className="h-4 w-4 text-brand" />
+                      </div>
+                      <span>{t("settings")}</span>
+                    </DropdownMenuItem>
+                  </div>
+                  <DropdownMenuSeparator className="bg-white/10 mx-2" />
+                  <div className="p-1">
+                    <DropdownMenuItem 
+                      onClick={async () => {
+                        const { logout } = useAuthStore.getState();
+                        const { removeAuthToken } = await import("@/features/auth/actions");
+                        logout();
+                        await removeAuthToken();
+                        toast.success(t("logout_success"));
+                      }}
+                      className="flex items-center gap-3 p-3 focus:bg-red-500/20 focus:text-red-500 text-red-400 cursor-pointer rounded-xl font-semibold transition-all"
+                    >
+                      <div className="size-8 rounded-lg bg-red-500/10 flex items-center justify-center">
+                        <LogOut className="h-4 w-4" />
+                      </div>
+                      <span>{t("logout")}</span>
+                    </DropdownMenuItem>
+                  </div>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <LoginDialog>
+                <Button className="h-10 lg:h-12 px-4 lg:px-6 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all flex items-center gap-2 font-bold text-sm lg:text-base">
+                  {t("login")}
+                  <FiArrowUpLeft className="size-4 lg:size-5" />
+                </Button>
+              </LoginDialog>
+            )}
 
             {/* mobile menu */}
             <NavbarSheet navLinks={navLinks} />

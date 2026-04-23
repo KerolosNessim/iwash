@@ -1,11 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { Calendar, Droplets, Users, Play } from "lucide-react";
-import Image from "next/image";
-import { TbArrowBigLeftLinesFilled } from "react-icons/tb";
-import { useTranslations } from "next-intl";
 import StartNowBtn from "@/features/shared/components/start-now-btn";
+import { Calendar, Droplets, Play, Users } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { About } from "../types";
 
-export default function IntroSection() {
+interface IntroSectionProps {
+  aboutData: About;
+}
+export default function IntroSection({ aboutData }: IntroSectionProps) {
   const t = useTranslations("IntroSection");
 
   return (
@@ -26,46 +28,31 @@ export default function IntroSection() {
             {/* Title with brand highlight */}
             <div className="space-y-4">
               <h2 className="text-4xl lg:text-6xl font-black text-[#1a1a1a] leading-[1.2]">
-                {t("title_part1")}{" "}
-                <span className="text-brand">{t("title_highlight")}</span>
-                <br />
-                {t("title_part2")}
+               {aboutData?.title}
               </h2>
             </div>
 
             {/* Description */}
             <p className="text-gray-400 text-lg lg:text-xl font-medium max-w-2xl leading-relaxed">
-              {t("description")}
+              {aboutData?.description}
             </p>
 
             {/* Feature Tokens Row */}
             <div className="flex flex-wrap items-center gap-8 py-2">
-              <div className="flex items-center gap-3">
-                <div className="size-11 rounded-full bg-orange-50 flex items-center justify-center border border-orange-100/50">
-                  <Calendar className="size-5 text-orange-500" />
+              {aboutData?.features?.map((feature, i) => (
+                <div key={i} className="flex items-center gap-3">
+                    <Image
+                      src={feature.image}
+                      alt="feature"
+                      width={100}
+                      height={100}
+                      className="size-10 "
+                    />
+                  <span className="text-gray-800 font-bold text-sm lg:text-base">
+                    {feature.label}
+                  </span>
                 </div>
-                <span className="text-gray-800 font-bold text-sm lg:text-base">
-                  {t("flexibility")}
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="size-11 rounded-full bg-purple-50 flex items-center justify-center border border-purple-100/50">
-                  <Users className="size-5 text-purple-500" />
-                </div>
-                <span className="text-gray-800 font-bold text-sm lg:text-base">
-                  {t("professional_team")}
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="size-11 rounded-full bg-[#e8f7ec] flex items-center justify-center border border-[#d1f0d8]">
-                  <Droplets className="size-5 text-[#2cb657]" />
-                </div>
-                <span className="text-gray-800 font-bold text-sm lg:text-base">
-                  {t("complete_equipment")}
-                </span>
-              </div>
+              ))}
             </div>
 
             {/* CTA Button */}
@@ -87,11 +74,11 @@ export default function IntroSection() {
 
               {/* Central Play Button */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <button className="size-24 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 flex items-center justify-center transition-all duration-500 hover:scale-110 hover:bg-white/30 group-hover:opacity-100">
+                <a href={aboutData?.video_url} target="_blank" rel="noopener noreferrer" className="size-24 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 flex items-center justify-center transition-all duration-500 hover:scale-110 hover:bg-white/30 group-hover:opacity-100">
                   <div className="size-16 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
                     <Play className="size-8 text-white fill-current translate-x-1" />
                   </div>
-                </button>
+                </a>
               </div>
             </div>
           </div>

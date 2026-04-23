@@ -7,12 +7,21 @@ import { RiFlashlightLine } from "react-icons/ri";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import StartNowBtn from "@/features/shared/components/start-now-btn";
+import { HeroData } from "../types";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  heroData: HeroData;
+}
+export default function HeroSection({ heroData }: HeroSectionProps) {
   const t = useTranslations("Hero");
 
   return (
-    <div className="bg-[url('/hero-1.png')] bg-cover bg-center bg-no-repeat w-full min-h-screen ">
+    <div
+      className={` bg-cover bg-center bg-no-repeat w-full min-h-screen `}
+      style={{
+        backgroundImage: `url(${heroData.background_image})` || `/hero-1.png`,
+      }}
+    >
       <div className="pb-20 bg-linear-to-l from-black/90 via-black/70 to-black/50 min-h-screen w-full flex flex-col justify-between pt-32 relative space-y-10">
         {/* Main Content Area */}
         <div className="container flex-1 flex flex-col justify-center">
@@ -22,20 +31,20 @@ export default function HeroSection() {
               {/* label */}
               <div className="flex items-center gap-2">
                 <div className="w-8 h-1 bg-brand"></div>
-                <p className="text-white lg:text-lg">{t("label")}</p>
+                <p className="text-white lg:text-lg">
+                  {heroData?.subtitle || t("label")}
+                </p>
               </div>
 
               {/* title */}
-              <h1 className="text-white text-5xl lg:text-6xl font-bold leading-tight uppercase">
-                <span className="tracking-widest">{t("title_part1")}</span>{" "}
-                {t("title_part2")}
-                <br />
-                <span className="text-brand">{t("title_highlight")}</span>{" "}
-                {t("title_part3")}
+              <h1 className="text-white text-5xl lg:text-6xl font-bold leading-relaxed uppercase">
+                {heroData?.title}
               </h1>
 
               {/* description */}
-              <p className="text-gray-400 text-lg">{t("description")}</p>
+              <p className="text-gray-400 text-lg">
+                {heroData?.description || t("description")}
+              </p>
 
               {/* buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -92,25 +101,14 @@ export default function HeroSection() {
           <div className="w-full lg:w-auto flex flex-col lg:items-start gap-4 ">
             <p className="text-gray-300 font-medium">{t("our_numbers")}</p>
             <div className="flex items-center gap-8">
-              <div className="flex flex-col justify-end h-full">
-                <div className="text-white font-bold flex items-end ltr:flex-row-reverse">
-                  <p className="text-lg pb-1 text-brand">k</p>
-                  <p className="text-5xl leading-none">10</p>
-                  <p className="text-xl pb-1 text-brand">+</p>
+              {heroData?.stats?.map((stat, i) => (
+                <div key={i} className="flex flex-col justify-end h-full">
+                  <div className="text-white text-5xl font-bold flex items-end ltr:flex-row-reverse">
+                    {stat.count}
+                  </div>
+                  <p className="text-gray-300 text-sm mt-1">{stat.label}</p>
                 </div>
-                <p className="text-gray-300 text-sm mt-1">{t("customers")}</p>
-              </div>
-
-              <div className="w-px h-12 bg-white/20"></div>
-
-              <div className="flex flex-col justify-end h-full">
-                <div className="text-white font-bold flex items-end ltr:flex-row-reverse">
-                  <p className="text-lg pb-1 text-brand">k</p>
-                  <p className="text-5xl leading-none">47</p>
-                  <p className="text-xl pb-1 text-brand">+</p>
-                </div>
-                <p className="text-gray-300 text-sm mt-1">{t("orders")}</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>

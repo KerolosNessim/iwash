@@ -9,6 +9,7 @@ import "../globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/features/shared/components/navbar";
 import Footer from "@/features/shared/components/footer";
+import QueryProvider from "@/providers/query-provider";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-geist-sans",
@@ -48,15 +49,17 @@ export default async function RootLayout({
       className={`${font.className} `}
       suppressHydrationWarning
     >
-      <body dir={locale === "ar" ? "rtl" : "ltr"}  >
-        <NextIntlClientProvider messages={messages}>
-          <DirectionProvider dir={locale === "ar" ? "rtl" : "ltr"}>
-            <Navbar/>
-            {children}
-            <Footer/>
-            <Toaster richColors position="top-right" />
-          </DirectionProvider>
-        </NextIntlClientProvider>
+      <body dir={locale === "ar" ? "rtl" : "ltr"}>
+        <QueryProvider>
+          <NextIntlClientProvider messages={messages}>
+            <DirectionProvider dir={locale === "ar" ? "rtl" : "ltr"}>
+              <Navbar />
+              {children}
+              <Footer />
+              <Toaster dir={locale === "ar" ? "rtl" : "ltr"} richColors position="top-right" />
+            </DirectionProvider>
+          </NextIntlClientProvider>
+        </QueryProvider>
       </body>
     </html>
   );

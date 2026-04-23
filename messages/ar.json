@@ -7,6 +7,10 @@
     "reviews": "آراء عملائنا!",
     "blog": "المدونة",
     "login": "تسجيل الدخول",
+    "profile": "الملف الشخصي",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج",
+    "logout_success": "تم تسجيل الخروج بنجاح",
     "sheet_description": "قائمة التصفح الرئيسية للنسخة المحمولة"
   },
   "Hero": {
@@ -185,6 +189,44 @@
         "title": "تــــأكيد الحجـــــــز",
         "description": "استلم سيارتك نظيفة."
       }
+    },
+    "auth":{
+      "login_title": "مرحبا بعودتك!",
+      "login_description": "قم بإدخال البيــانات لتسجيل حســابك الان.",
+      "login_form":{
+        "phone_label": "رقم الجوال",
+        "password_placeholder": "أدخل كلمة المرور هنا ...",
+        "password_label": "كلمة المرور",
+        "required_message": "هذا الحقل مطلوب",
+        "min_length_message": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+        "phone_valid_message": "أدخل رقم هاتف صالح",
+        "password_valid_message": "أدخل كلمة مرور صالحة",
+        "login_btn": "تسجيل الدخول",
+        "remember_me": "تذكرني",
+        "forgot_password": "نسيت كلمة المرور؟",
+        "or": "أو",
+        "have_not_account": "ليس لديك حساب ؟",
+        "register": "إنشاء حساب جديد"
+      },
+      "register_title": "انشاء حساب جديد",
+      "register_description": "قم بادخال البيانات لانشاء حسابك الان.",
+      "register_form": {
+        "name_label": "الاسم الأول و الأخير",
+        "name_placeholder": "أدخل الاسم الأول و الأخير هنا ...",
+        "email_label": "البريد الإلكتروني",
+        "email_placeholder": "example@gmail.com",
+        "terms_text": "بالنقر فوق \"إنشئ حسابك الآن\"، فإنك توافق على الشروط والأحكام وسياسة الخصوصية",
+        "register_btn": "إنشئ حسابك الآن",
+        "already_have_account": "لديك حساب",
+        "login_now": "سجل الآن"
+      },
+      "register_success": {
+        "title": "تم إنشاء حسابك بنجاح!",
+        "welcome": "مرحباً بك في اي واش",
+        "description": "اختر باقة غسيل سيارتك وحدد موقعك ووقت الخدمة بكل سهولة.",
+        "view_packages": "عرض الباقات",
+        "download_app": "حمّل التطبيق الآن",
+        "download_on_the": "حمله من"
+      }
     }
-    
 }
