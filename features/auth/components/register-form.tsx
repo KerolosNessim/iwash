@@ -65,7 +65,7 @@ export default function RegisterForm({ setView }: RegisterFormProps) {
     phone: z.string().min(1, { message: t("login_form.required_message") }),
     email: z.string().email({ message: t("login_form.phone_valid_message") || "Invalid email" }).min(1, { message: t("login_form.required_message") }),
     password: z.string().min(6, { message: t("login_form.min_length_message") }),
-    agreeToTerms: z.boolean().optional().refine(val => val === true, {
+    agreeToTerms: z.boolean().refine((val) => val === true, {
       message: t("login_form.required_message"),
     }),
   });
