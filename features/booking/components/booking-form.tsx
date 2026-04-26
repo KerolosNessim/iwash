@@ -78,8 +78,8 @@ export default function BookingForm({
   const form = useForm<BookingValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      phone: "",
+      name: user?.name || "",
+      phone: user?.phone || "",
       location: "",
       time: "",
       plateNumber: "",
