@@ -54,16 +54,25 @@ export async function apiFetch<T>(
     }
   }
 
-  const res = await fetch(url, {
-    ...rest,
-    headers: {
-      "Accept-Language": locale,
-      "Accept": "application/json",
-      "Content-Type": "application/json",
-      ...(activeToken && { Authorization: `Bearer ${activeToken}` }),
-      ...headers,
-    },
-  });
+  let res;
+  try {
+    res = await fetch(url, {
+      ...rest,
+      headers: {
+        "Accept-Language": locale,
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        ...(activeToken && { Authorization: `Bearer ${activeToken}` }),
+        ...headers,
+      },
+    });
+  } catch (error) {
+    console.error("Fetch failed for URL:", url, error);
+    throw new ApiError(
+      "Network Error: Failed to connect to the server. Please check your internet connection.",
+      500
+    );
+  }
 
   let data;
   try {

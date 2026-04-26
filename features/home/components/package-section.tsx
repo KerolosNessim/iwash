@@ -13,7 +13,7 @@ const setting=response.data?.settings??{}
 const packages = response.data?.items ?? [];
 
   return (
-    <div className="bg-gray-100/50 rounded-[3rem] py-16 space-y-16">
+    <div id="packages" className="scroll-mt-20 bg-gray-100/50 rounded-[3rem] py-16 space-y-16">
       <div className="container">
         <div className="flex items-end justify-between gap-6 mb-12 max-lg:flex-col max-lg:items-start">
           <SectionHeader

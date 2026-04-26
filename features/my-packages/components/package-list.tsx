@@ -1,0 +1,129 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useRouter } from "@/i18n/navigation";
+import { ChevronLeft, Plus } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { MyPackageItem } from "../types";
+import PackageCard from "./my-package-card";
+import CustomPagination from "@/features/my-bookings/components/pagination";
+import { useState } from "react";
+import MyPackageCard from "./my-package-card";
+
+interface PackageListProps {
+  activePackages: MyPackageItem[];
+  finishedPackages: MyPackageItem[];
+  pagination: {
+    active?: { total: number; per_page: number; current_page: number; last_page: number };
+    finished?: { total: number; per_page: number; current_page: number; last_page: number };
+  };
+  onPageChange: (type: "active" | "finished", page: number) => void;
+}
+
+export default function PackageList({ 
+  activePackages, 
+  finishedPackages, 
+  pagination,
+  onPageChange 
+}: PackageListProps) {
+  const t = useTranslations("MyPackages");
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState<"active" | "finished">("active");
+
+  return (
+    <div className="space-y-8">
+      {/* Header */}
+      <div className="flex items-center gap-2">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => router.back()}
+          className="bg-gray-900 text-white rounded-full hover:bg-brand size-10"
+        >
+          <ChevronLeft size={20} className="rtl:rotate-180" />
+        </Button>
+        <h2 className="text-xl font-black text-gray-400">{t("title")}</h2>
+      </div>
+
+      <Tabs
+        value={activeTab}
+        onValueChange={(v) => setActiveTab(v as "active" | "finished")}
+        className="w-full space-y-8"
+      >
+        <TabsList className="w-full bg-white p-1 rounded h-12! border border-gray-100 shadow-sm">
+          <TabsTrigger
+            value="active"
+            className="flex-1 h-full font-bold data-[state=active]:bg-[#90A1B9] data-[state=active]:text-white data-[state=active]:shadow-none text-gray-400"
+          >
+            {t("active")}
+          </TabsTrigger>
+          <TabsTrigger
+            value="finished"
+            className="flex-1 h-full font-bold data-[state=active]:bg-[#90A1B9] data-[state=active]:text-white data-[state=active]:shadow-none text-gray-400"
+          >
+            {t("finished")}
+          </TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="active" className="mt-0">
+          {activePackages.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {activePackages.map((pkg) => (
+                  <MyPackageCard key={pkg.id} item={pkg} />
+                ))}
+              </div>
+              <CustomPagination
+                currentPage={pagination.active?.current_page || 1}
+                lastPage={pagination.active?.last_page || 1}
+                onPageChange={(page) => onPageChange("active", page)}
+              />
+            </>
+          ) : (
+            <EmptyState message={t("no_active")} />
+          )}
+        </TabsContent>
+
+        <TabsContent value="finished" className="mt-0">
+          {finishedPackages.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {finishedPackages.map((pkg) => (
+                  <MyPackageCard key={pkg.id} item={pkg} />
+                ))}
+              </div>
+              <CustomPagination
+                currentPage={pagination.finished?.current_page || 1}
+                lastPage={pagination.finished?.last_page || 1}
+                onPageChange={(page) => onPageChange("finished", page)}
+              />
+            </>
+          ) : (
+            <EmptyState message={t("no_finished")} />
+          )}
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
+}
+
+function EmptyState({ message }: { message: string }) {
+  const t = useTranslations("MyPackages");
+  const router = useRouter();
+  
+  return (
+    <div className="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200 gap-4">
+      <div className="size-16 bg-white rounded-full flex items-center justify-center shadow-sm text-gray-300">
+        <Plus size={32} />
+      </div>
+      <p className="text-gray-400 font-bold">{message}</p>
+      <Button 
+        onClick={() => router.push("/#packages")}
+        className="bg-brand text-black rounded-full font-bold px-8"
+      >
+        {t("subscribe_new")}
+      </Button>
+    </div>
+  );
+}

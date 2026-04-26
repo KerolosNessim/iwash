@@ -8,6 +8,7 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 import StartNowBtn from "@/features/shared/components/start-now-btn";
 import { HeroData } from "../types";
+import { Link } from "@/i18n/navigation";
 
 interface HeroSectionProps {
   heroData: HeroData;
@@ -37,7 +38,7 @@ export default function HeroSection({ heroData }: HeroSectionProps) {
               </div>
 
               {/* title */}
-              <h1 className="text-white text-5xl lg:text-6xl font-bold leading-relaxed uppercase">
+              <h1 className="text-white text-3xl lg:text-5xl font-bold leading-relaxed uppercase">
                 {heroData?.title}
               </h1>
 
@@ -51,7 +52,7 @@ export default function HeroSection({ heroData }: HeroSectionProps) {
                 <StartNowBtn />
 
                 <Button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 h-12 lg:h-14 lg:text-lg rounded-full font-bold hover:bg-white hover:text-black transition-all">
-                  {t("view_packages")}
+                  <Link href="#packages">{t("view_packages")}</Link>
                   <HiOutlineSquare3Stack3D />
                 </Button>
               </div>

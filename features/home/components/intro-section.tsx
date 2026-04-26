@@ -27,13 +27,13 @@ export default function IntroSection({ aboutData }: IntroSectionProps) {
 
             {/* Title with brand highlight */}
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-6xl font-black text-[#1a1a1a] leading-[1.2]">
+              <h2 className="text-3xl lg:text-5xl font-black text-[#1a1a1a] leading-[1.2]">
                {aboutData?.title}
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-gray-400 text-lg lg:text-xl font-medium max-w-2xl leading-relaxed">
+            <p className="text-gray-400 text-base lg:text-lg font-medium max-w-2xl leading-relaxed">
               {aboutData?.description}
             </p>
 

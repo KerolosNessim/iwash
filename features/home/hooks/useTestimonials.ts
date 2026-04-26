@@ -7,7 +7,6 @@ export const useTestimonials = () => {
     queryFn: getTestimonial,
   });
 
-  console.log("Raw Testimonials Data:", data);
 
   return { 
     testimonials: data?.data || [], 

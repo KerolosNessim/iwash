@@ -126,18 +126,7 @@
   }
   html {
     @apply font-sans;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
+    scroll-behavior: smooth;
   }
 }
 @theme {
@@ -166,10 +155,10 @@
     width: 96%;
   }
   @variant xl {
-    width: 85%;
+    width: 80%;
   }
   @variant 2xl {
-    width: 85%;
+    width: 80%;
   }
 }
 @layer utilities {

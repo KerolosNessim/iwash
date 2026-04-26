@@ -93,12 +93,12 @@
       }
     },
     "subscription": "إشترك",
-    "per_month":"غسلات في الشهر",
-    "save":"وفر",
-    "choose":" إختر طريقة الغسيل التي تستحقها !",
-    "external":"خارجي فقط",
-    "both":"داخلي وخارجي",
-    "what_you_get":"ما الذي ستحصل عليه:"
+    "per_month": "غسلات في الشهر",
+    "save": "وفر",
+    "choose": " إختر طريقة الغسيل التي تستحقها !",
+    "external": "خارجي فقط",
+    "both": "داخلي وخارجي",
+    "what_you_get": "ما الذي ستحصل عليه:"
   },
   "WhyUs": {
     "badgeText": "مذا يميزنــــا !",
@@ -139,94 +139,191 @@
       "rating": "5.0"
     }
   },
-      "footer": {
-        "payment_method": "طــرق دفــع آمنــة ",
-      "quickLinks": "روابط سريعة",
-      "account": "حسابنا",
-      "contact": "هل تحتاج مساعدة؟",
-      "workingHours": "مواعيد العمل",
-      "email": "البريد الإلكتروني",
-      "phone": "رقم الهاتف",
-      "followUs": "تابعنا علي",
-      "rights": "جميع الحقوق محفوظة",
-      "terms": "الشروط والأحكام",
-      "contact_us": "تواصل معنا",
-      "privacy": "سياسة الخصوصية",
-      "links": {
-        "home": "الرئيسية",
-        "about": "من نحن",
-        "services": "خدماتنا",
-        "contact": "تواصل معنا"
-      },
-      "accountLinks": {
-        "login": "تسجيل الدخول",
-        "register": "إنشاء حساب",
-        "orders": "طلباتي"
-      },
-      "days": {
-        "satThu": "السبت - الخميس",
-        "fri": "الجمعة"
-      },
-      "time": {
-        "weekdays": "9:00 ص - 18:00 م",
-        "friday": "14:00 م - 9:00 م"
-      },
-      "description": "احصل على غسيل سيارة متكامل وأنت في مكانك فقط احجز إلكترونياً وحدد نوع الخدمة وسنتولى تنظيفها بعناية لتكون جاهزة قبل موعدك."
+  "footer": {
+    "payment_method": "طــرق دفــع آمنــة ",
+    "quickLinks": "روابط سريعة",
+    "account": "حسابنا",
+    "contact": "هل تحتاج مساعدة؟",
+    "workingHours": "مواعيد العمل",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "followUs": "تابعنا علي",
+    "rights": "جميع الحقوق محفوظة",
+    "terms": "الشروط والأحكام",
+    "contact_us": "تواصل معنا",
+    "privacy": "سياسة الخصوصية",
+    "links": {
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "services": "خدماتنا",
+      "contact": "تواصل معنا"
     },
-    "HowWork":{
-      "badgeText": "كيف نعمل !",
-      "title": "غسيــــــــــــل سيــــــــــــاراتك اسهل من قبــــــــــــل !",
-      "description": "ثلاث خطوات بسيطة تفصلك عن خدمة غسيل احترافية.",
-      "step1": {
-        "title": "اختر الخدمة",
-        "description": "حدد نوع الغسيل المناسب لسيارتك من القائمة."
-      },
-      "step2": {
-        "title": "حدّد الوقت",
-        "description": "اختر التوقيت الذي يناسب جدولك ومواعيدك."
-      },
-      "step3": {
-        "title": "تــــأكيد الحجـــــــز",
-        "description": "استلم سيارتك نظيفة."
-      }
+    "accountLinks": {
+      "login": "تسجيل الدخول",
+      "register": "إنشاء حساب",
+      "orders": "طلباتي"
     },
-    "auth":{
-      "login_title": "مرحبا بعودتك!",
-      "login_description": "قم بإدخال البيــانات لتسجيل حســابك الان.",
-      "login_form":{
-        "phone_label": "رقم الجوال",
-        "password_placeholder": "أدخل كلمة المرور هنا ...",
-        "password_label": "كلمة المرور",
-        "required_message": "هذا الحقل مطلوب",
-        "min_length_message": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
-        "phone_valid_message": "أدخل رقم هاتف صالح",
-        "password_valid_message": "أدخل كلمة مرور صالحة",
-        "login_btn": "تسجيل الدخول",
-        "remember_me": "تذكرني",
-        "forgot_password": "نسيت كلمة المرور؟",
-        "or": "أو",
-        "have_not_account": "ليس لديك حساب ؟",
-        "register": "إنشاء حساب جديد"
-      },
-      "register_title": "انشاء حساب جديد",
-      "register_description": "قم بادخال البيانات لانشاء حسابك الان.",
-      "register_form": {
-        "name_label": "الاسم الأول و الأخير",
-        "name_placeholder": "أدخل الاسم الأول و الأخير هنا ...",
-        "email_label": "البريد الإلكتروني",
-        "email_placeholder": "example@gmail.com",
-        "terms_text": "بالنقر فوق \"إنشئ حسابك الآن\"، فإنك توافق على الشروط والأحكام وسياسة الخصوصية",
-        "register_btn": "إنشئ حسابك الآن",
-        "already_have_account": "لديك حساب",
-        "login_now": "سجل الآن"
-      },
-      "register_success": {
-        "title": "تم إنشاء حسابك بنجاح!",
-        "welcome": "مرحباً بك في اي واش",
-        "description": "اختر باقة غسيل سيارتك وحدد موقعك ووقت الخدمة بكل سهولة.",
-        "view_packages": "عرض الباقات",
-        "download_app": "حمّل التطبيق الآن",
-        "download_on_the": "حمله من"
-      }
+    "days": {
+      "satThu": "السبت - الخميس",
+      "fri": "الجمعة"
+    },
+    "time": {
+      "weekdays": "9:00 ص - 18:00 م",
+      "friday": "14:00 م - 9:00 م"
+    },
+    "description": "احصل على غسيل سيارة متكامل وأنت في مكانك فقط احجز إلكترونياً وحدد نوع الخدمة وسنتولى تنظيفها بعناية لتكون جاهزة قبل موعدك."
+  },
+  "HowWork": {
+    "badgeText": "كيف نعمل !",
+    "title": "غسيــــــــــــل سيــــــــــــاراتك اسهل من قبــــــــــــل !",
+    "description": "ثلاث خطوات بسيطة تفصلك عن خدمة غسيل احترافية.",
+    "step1": {
+      "title": "اختر الخدمة",
+      "description": "حدد نوع الغسيل المناسب لسيارتك من القائمة."
+    },
+    "step2": {
+      "title": "حدّد الوقت",
+      "description": "اختر التوقيت الذي يناسب جدولك ومواعيدك."
+    },
+    "step3": {
+      "title": "تــــأكيد الحجـــــــز",
+      "description": "استلم سيارتك نظيفة."
     }
+  },
+  "auth": {
+    "login_title": "مرحبا بعودتك!",
+    "login_description": "قم بإدخال البيــانات لتسجيل حســابك الان.",
+    "login_form": {
+      "phone_label": "رقم الجوال",
+      "password_placeholder": "أدخل كلمة المرور هنا ...",
+      "password_label": "كلمة المرور",
+      "required_message": "هذا الحقل مطلوب",
+      "min_length_message": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+      "phone_valid_message": "أدخل رقم هاتف صالح",
+      "password_valid_message": "أدخل كلمة مرور صالحة",
+      "login_btn": "تسجيل الدخول",
+      "remember_me": "تذكرني",
+      "forgot_password": "نسيت كلمة المرور؟",
+      "or": "أو",
+      "have_not_account": "ليس لديك حساب ؟",
+      "register": "إنشاء حساب جديد"
+    },
+    "register_title": "انشاء حساب جديد",
+    "register_description": "قم بادخال البيانات لانشاء حسابك الان.",
+    "register_form": {
+      "name_label": "الاسم الأول و الأخير",
+      "name_placeholder": "أدخل الاسم الأول و الأخير هنا ...",
+      "email_label": "البريد الإلكتروني",
+      "email_placeholder": "example@gmail.com",
+      "terms_text": "بالنقر فوق \"إنشئ حسابك الآن\"، فإنك توافق على الشروط والأحكام وسياسة الخصوصية",
+      "register_btn": "إنشئ حسابك الآن",
+      "already_have_account": "لديك حساب",
+      "login_now": "سجل الآن"
+    },
+    "register_success": {
+      "title": "تم إنشاء حسابك بنجاح!",
+      "welcome": "مرحباً بك في اي واش",
+      "description": "اختر باقة غسيل سيارتك وحدد موقعك ووقت الخدمة بكل سهولة.",
+      "view_packages": "عرض الباقات",
+      "download_app": "حمّل التطبيق الآن",
+      "download_on_the": "حمله من"
+    }
+  },
+  "booking": {
+    "title": "إتمام الحجـــــــز ..",
+    "loading": "جاري التحميل...",
+    "must_login_for_subscription": "يجب تسجيل الدخول أولاً لتتمكن من تفعيل هذه الباقة الشهرية.",
+    "summary": "لقد اخترت {package} ({type}) بنظام {mode}",
+    "external": "غسيل خارجي",
+    "both": "داخلي وخارجي",
+    "subscription": "تفعيل الباقة",
+    "single": "غسيل لمرة واحدة",
+    "customer_data": "بيانات العميل / المراجعة والدفع",
+    "location_date_time": "الموقع / التاريخ والوقت",
+    "car_details": "تفاصيل السيارة",
+    "booking_whatsapp_note": "سيتم ارسال تأكيد الحجز عبر الواتس اب.",
+    "form": {
+      "name_label": "الاسم",
+      "name_placeholder": "ادخال الاسم الكامل هنا ...",
+      "phone_label": "رقم الجوال",
+      "password_label": "كلمة المرور",
+      "password_placeholder": "ادخال كلمة المرور هنا ...",
+      "location_label": "الموقع",
+      "location_placeholder": "اختيار للموقع من هنا ...",
+      "date_label": "التاريخ",
+      "date_placeholder": "ادخال تاريخ الغسيل من هنا ...",
+      "time_label": "الوقت",
+      "time_placeholder": "ادخال وقت الغسيل من هنا ...",
+      "plate_number_label": "رقم اللوحة",
+      "plate_number_placeholder": "ادخال رقم اللوحة من هنا ...",
+      "car_type_label": "نوع السيارة",
+      "car_type_placeholder": "ادخال نوع السيارة من هنا ...",
+      "car_color_label": "لون السيارة",
+      "car_color_placeholder": "ادخال لون السيارة من هنا ...",
+      "required": "هذا الحقل مطلوب",
+      "submit": "اطلب الآن",
+      "loading": "جاري التحميل ..."
+    }
+  },
+  "Error": {
+    "title": "عذراً، حدث خطأ ما!",
+    "description": "لقد حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى أو التواصل مع الدعم إذا استمرت المشكلة.",
+    "retry": "إعادة المحاولة",
+    "go_home": "العودة للرئيسية"
+  },
+  "UserSheet": {
+    "title": "حسابي",
+    "user_label": "الملف الشخصي",
+    "bookings_label": "طلبات الغسيل",
+    "my_bookings": "حجوزاتي",
+    "my_bookings_desc": "عرض ومتابعة جميع حجوزاتك الحالية والسابقة بسهولة.",
+    "my_packages": "باقاتي",
+    "my_packages_desc": "إدارة باقاتك المشترك فيها.",
+    "account_settings": "اعدادات الحساب",
+    "language": "اللغة",
+    "notifications": "إيقاف الإشعارات",
+    "logout": "تسجيل الخروج",
+    "delete_account": "حذف الحساب",
+    "support": "مركز المساعدة",
+    "contact_whatsapp": "تواصل معنا عبر الواتساب",
+    "download_app": "حمّل التطبيق الآن"
+  },
+  "MyBookings": {
+    "title": "حجوزاتي",
+    "in_progress": "قيد التنفيذ",
+    "completed": "المكتملة",
+    "pending_status": "قيد التنفيذ",
+    "completed_status": "مكتملة",
+    "cancelled_status": "ملغاة",
+    "order_no": "طلب رقم",
+    "since": "منذ",
+    "car_type": "نوع السيارة",
+    "location": "الموقع",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "no_pending": "لا توجد حجوزات قيد التنفيذ حالياً",
+    "no_completed": "لا توجد حجوزات مكتملة حالياً",
+    "book_new": "حجز خدمة جديدة",
+    "load_error": "حدث خطأ أثناء تحميل الحجوزات",
+    "retry": "إعادة المحاولة"
+  },
+  "MyPackages": {
+    "title": "باقاتي",
+    "active": "نشطة",
+    "finished": "منتهية",
+    "active_status": "نشطة",
+    "finished_status": "منتهية",
+    "washes_per_month": "{count} غسلات في الشهر",
+    "usage": "الاستخدام",
+    "washes_count": "{used} / {total} غسلة",
+    "area": "الموقع",
+    "duration": "المدة",
+    "subscription_date": "تاريخ الاشتراك",
+    "time": "الوقت",
+    "request_wash": "طلب غسلة الآن",
+    "renew": "تجديد الاشتراك",
+    "no_active": "لا توجد باقات نشطة حالياً",
+    "no_finished": "لا توجد باقات منتهية حالياً",
+    "subscribe_new": "اشترك في باقة جديدة"
+  }
 }

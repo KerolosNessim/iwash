@@ -92,13 +92,13 @@
         ]
       }
     },
-        "subscription": "Subscribe",
-    "per_month":"Washes per month",
-    "save":"Save",
-    "choose":"Choose the wash method you deserve!",
-    "external":"External only",
-    "both":"External & Internal",
-    "what_you_get":"What you will get:"
+    "subscription": "Subscribe",
+    "per_month": "Washes per month",
+    "save": "Save",
+    "choose": "Choose the wash method you deserve!",
+    "external": "External only",
+    "both": "External & Internal",
+    "what_you_get": "What you will get:"
   },
   "WhyUs": {
     "badgeText": "What Makes Us Special!",
@@ -130,103 +130,200 @@
     "badgeText": "Our Customers Reviews",
     "title": "What Our Customers ",
     "highlight": "Say About Us!",
-      "content": {
-    "before": "Before",
-    "after": "After",
-    "location": "centro mall",
-    "userName": "Abdullah Al Amoudi",
-    "review": "Excellent and fast service in a flash. I left the car, went out, and came back quickly. May God grant you wellness.",
-    "rating": "5.0"
-  }
-},
-    "footer": {
-      "payment_method": "Secure Payment Methods",
-      "quickLinks": "Quick Links",
-      "account": "Account",
-      "contact": "Need Help?",
-      "workingHours": "Working Hours",
-      "email": "Email",
-      "phone": "Phone",
-      "followUs": "Follow Us",
-      "rights": "All rights reserved",
-      "terms": "Terms and Conditions",
-      "contact_us": "Contact Us",
-      "privacy": "Privacy Policy",
-      "links": {
-        "home": "Home",
-        "about": "About Us",
-        "services": "Services",
-        "contact": "Contact Us"
-      },
-      "accountLinks": {
-        "login": "Login",
-        "register": "Register",
-        "orders": "My Orders"
-      },
-      "days": {
-        "satThu": "Saturday - Thursday",
-        "fri": "Friday"
-      },
-      "time": {
-        "weekdays": "9:00 AM - 6:00 PM",
-        "friday": "2:00 PM - 9:00 PM"
-      },
-      "description": "Get premium car wash services at your location. We guarantee quality and convenience."
-    },
-        "HowWork":{
-      "badgeText": "How we work!",
-      "title": "Washing your car is easier than ever!",
-      "description": "Three simple steps to a professional car wash service.",
-      "step1": {
-        "title": "Choose the service",
-        "description": "Select the type of wash suitable for your car from the list."
-      },
-      "step2": {
-        "title": "Set the time",
-        "description": "Choose the time that suits your schedule."
-      },
-      "step3": {
-        "title": "Confirm the booking",
-        "description": "Receive your clean car."
-      }
-    },
-        "auth":{
-      "login_title": "Welcome back!",
-      "login_description": "Enter the data to register your account now.",
-      "login_form":{
-        "phone_label": "Phone Number",
-        "password_placeholder": "Enter password here ...",
-        "password_label": "Password",
-        "required_message": "This field is required",
-        "min_length_message": "Password must be at least 6 characters",
-        "phone_valid_message": "Enter a valid phone number",
-        "password_valid_message": "Enter a valid password",
-        "login_btn": "Login",
-        "remember_me": "Remember Me",
-        "forgot_password": "Forgot password?",
-        "or": "Or",
-        "have_not_account": "Don't have an account?",
-        "register": "Create new account"
-      },
-      "register_title": "Create New Account",
-      "register_description": "Enter the data to create your account now.",
-      "register_form": {
-        "name_label": "First and Last Name",
-        "name_placeholder": "Enter first and last name here ...",
-        "email_label": "Email Address",
-        "email_placeholder": "example@gmail.com",
-        "terms_text": "By clicking 'Create your account now', you agree to the Terms and Conditions and Privacy Policy",
-        "register_btn": "Create your account now",
-        "already_have_account": "Already have an account?",
-        "login_now": "Login now"
-      },
-      "register_success": {
-        "title": "Account created successfully!",
-        "welcome": "Welcome to iWash",
-        "description": "Choose your car wash package, set your location and service time with ease.",
-        "view_packages": "View Packages",
-        "download_app": "Download the app now",
-        "download_on_the": "Download On The"
-      }
+    "content": {
+      "before": "Before",
+      "after": "After",
+      "location": "centro mall",
+      "userName": "Abdullah Al Amoudi",
+      "review": "Excellent and fast service in a flash. I left the car, went out, and came back quickly. May God grant you wellness.",
+      "rating": "5.0"
     }
+  },
+  "footer": {
+    "payment_method": "Secure Payment Methods",
+    "quickLinks": "Quick Links",
+    "account": "Account",
+    "contact": "Need Help?",
+    "workingHours": "Working Hours",
+    "email": "Email",
+    "phone": "Phone",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved",
+    "terms": "Terms and Conditions",
+    "contact_us": "Contact Us",
+    "privacy": "Privacy Policy",
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "contact": "Contact Us"
+    },
+    "accountLinks": {
+      "login": "Login",
+      "register": "Register",
+      "orders": "My Orders"
+    },
+    "days": {
+      "satThu": "Saturday - Thursday",
+      "fri": "Friday"
+    },
+    "time": {
+      "weekdays": "9:00 AM - 6:00 PM",
+      "friday": "2:00 PM - 9:00 PM"
+    },
+    "description": "Get premium car wash services at your location. We guarantee quality and convenience."
+  },
+  "HowWork": {
+    "badgeText": "How we work!",
+    "title": "Washing your car is easier than ever!",
+    "description": "Three simple steps to a professional car wash service.",
+    "step1": {
+      "title": "Choose the service",
+      "description": "Select the type of wash suitable for your car from the list."
+    },
+    "step2": {
+      "title": "Set the time",
+      "description": "Choose the time that suits your schedule."
+    },
+    "step3": {
+      "title": "Confirm the booking",
+      "description": "Receive your clean car."
+    }
+  },
+  "auth": {
+    "login_title": "Welcome back!",
+    "login_description": "Enter the data to register your account now.",
+    "login_form": {
+      "phone_label": "Phone Number",
+      "password_placeholder": "Enter password here ...",
+      "password_label": "Password",
+      "required_message": "This field is required",
+      "min_length_message": "Password must be at least 6 characters",
+      "phone_valid_message": "Enter a valid phone number",
+      "password_valid_message": "Enter a valid password",
+      "login_btn": "Login",
+      "remember_me": "Remember Me",
+      "forgot_password": "Forgot password?",
+      "or": "Or",
+      "have_not_account": "Don't have an account?",
+      "register": "Create new account"
+    },
+    "register_title": "Create New Account",
+    "register_description": "Enter the data to create your account now.",
+    "register_form": {
+      "name_label": "First and Last Name",
+      "name_placeholder": "Enter first and last name here ...",
+      "email_label": "Email Address",
+      "email_placeholder": "example@gmail.com",
+      "terms_text": "By clicking 'Create your account now', you agree to the Terms and Conditions and Privacy Policy",
+      "register_btn": "Create your account now",
+      "already_have_account": "Already have an account?",
+      "login_now": "Login now"
+    },
+    "register_success": {
+      "title": "Account created successfully!",
+      "welcome": "Welcome to iWash",
+      "description": "Choose your car wash package, set your location and service time with ease.",
+      "view_packages": "View Packages",
+      "download_app": "Download the app now",
+      "download_on_the": "Download On The"
+    }
+  },
+  "booking": {
+    "title": "Booking confirmation.",
+    "loading": "Loading...",
+    "must_login_for_subscription": "You must log in first to be able to activate this monthly package.",
+    "summary": "You have selected {package} ({type}) with {mode} mode",
+    "external": "External Wash",
+    "both": "Internal & External",
+    "subscription": "Package Activation",
+    "single": "Single Wash",
+    "customer_data": "Customer Data / Review & Payment",
+    "location_date_time": "Location / Date & Time",
+    "car_details": "Car Details",
+    "booking_whatsapp_note": "Booking confirmation will be sent via WhatsApp.",
+    "form": {
+      "name_label": "Name",
+      "name_placeholder": "Enter full name here ...",
+      "phone_label": "Phone Number",
+      "password_label": "Password",
+      "password_placeholder": "Enter password here ...",
+      "location_label": "Location",
+      "location_placeholder": "Choose location here ...",
+      "date_label": "Date",
+      "date_placeholder": "Enter wash date here ...",
+      "time_label": "Time",
+      "time_placeholder": "Enter wash time here ...",
+      "plate_number_label": "Plate Number",
+      "plate_number_placeholder": "Enter plate number here ...",
+      "car_type_label": "Car Type",
+      "car_type_placeholder": "Choose car type here ...",
+      "car_color_label": "Car Color",
+      "car_color_placeholder": "Choose car color here ...",
+      "required": "This field is required",
+      "submit": "Book Now!",
+      "loading":"loading..."
+    }
+  },
+  "Error": {
+    "title": "Oops! Something went wrong",
+    "description": "An unexpected error occurred. Please try again or contact support if the problem persists.",
+    "retry": "Try Again",
+    "go_home": "Go Home"
+  },
+  "UserSheet": {
+    "title": "My Account",
+    "user_label": "Personal Profile",
+    "bookings_label": "Washing Orders",
+    "my_bookings": "My Bookings",
+    "my_bookings_desc": "View and track all your current and past bookings easily.",
+    "my_packages": "My Packages",
+    "my_packages_desc": "Manage your subscribed packages.",
+    "account_settings": "Account Settings",
+    "language": "Language",
+    "notifications": "Disable Notifications",
+    "logout": "Logout",
+    "delete_account": "Delete Account",
+    "support": "Help Center",
+    "contact_whatsapp": "Contact us via WhatsApp",
+    "download_app": "Download the App Now"
+  },
+  "MyBookings": {
+    "title": "My Bookings",
+    "in_progress": "In Progress",
+    "completed": "Completed",
+    "pending_status": "In Progress",
+    "completed_status": "Completed",
+    "cancelled_status": "Cancelled",
+    "order_no": "Order No",
+    "since": "Since",
+    "car_type": "Car Type",
+    "location": "Location",
+    "date": "Date",
+    "time": "Time",
+    "no_pending": "No in-progress bookings currently",
+    "no_completed": "No completed bookings currently",
+    "book_new": "Book a New Service",
+    "load_error": "Error loading bookings",
+    "retry": "Retry"
+  },
+  "MyPackages": {
+    "title": "My Packages",
+    "active": "Active",
+    "finished": "Expired",
+    "active_status": "Active",
+    "finished_status": "Expired",
+    "washes_per_month": "{count} washes per month",
+    "usage": "Usage",
+    "washes_count": "{used} / {total} washes",
+    "area": "Location",
+    "duration": "Duration",
+    "subscription_date": "Subscription Date",
+    "time": "Time",
+    "request_wash": "Request Wash Now",
+    "renew": "Renew Subscription",
+    "no_active": "No active packages currently",
+    "no_finished": "No expired packages currently",
+    "subscribe_new": "Subscribe to a New Package"
   }
+}

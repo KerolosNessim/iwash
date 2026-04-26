@@ -26,7 +26,7 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="py-16">
+    <div id="reviews" className="scroll-mt-20 py-16">
       <Carousel
         className="space-y-16"
         opts={{
